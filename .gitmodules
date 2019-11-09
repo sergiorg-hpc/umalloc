@@ -1,0 +1,3 @@
+[submodule "ummap-io"]
+	path = ummap-io
+	url = git@github.com:sergiorg-kth/ummap-io.git
