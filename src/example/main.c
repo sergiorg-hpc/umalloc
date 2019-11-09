@@ -22,14 +22,14 @@ int main(int argc, char **argv)
     ptr = umalloc("./example.data", size);
     CHKB(ptr != NULL);
 
-    // Increase the values stored on the allocation
+    // Set some random value on the allocation
     for (off_t i = 0; i < size; i++)
     {
-        ptr[i] += 1;
+        ptr[i] = 21;
     }
 
     // Alternative: Use traditional mem. functions
-    // memset(ptr, 21, size);
+    memset(ptr, 21, size);
 
     // Synchronize with storage to ensure that the latest changes are flushed
     hr = usync(ptr);
